@@ -19,7 +19,7 @@ namespace WongaReceiverApp
 
                 var messageQueue = new MessageQueue();
                 messageQueue.MessagesCollection.CollectionChanged += MessagesCollection_CollectionChanged;
-                messageQueue.ReceiveMessage(MessageQueueName, false);
+                messageQueue.ReceiveMessage(MessageQueueName, true);
             }
             catch (Exception ex)
             {
