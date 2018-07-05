@@ -70,10 +70,10 @@ namespace RabbitMqLibrary
                     consumer.Received += (model, eventArgs) =>
                     {
                         byte[] body = eventArgs.Body;
-                        string name = Encoding.UTF8.GetString(body);
+                        string message = Encoding.UTF8.GetString(body);
 
                         // Add to Observable list so the client can subscribe to collection changed events.
-                        MessagesCollection.Add($"Message received: {name}");
+                        MessagesCollection.Add(message);
                     };
 
                     channel.BasicConsume(queue, autoAck, consumer);

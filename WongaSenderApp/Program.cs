@@ -22,10 +22,12 @@ namespace WongaSenderApp
                     if (string.IsNullOrEmpty(name))
                         Environment.Exit(0);
 
-                    var messageQueue = new MessageQueue();
-                    messageQueue.SendMessage(MessageQueueName, name);
+                    string message = $"Hello my name is, {name}";
 
-                    Console.WriteLine($"Message sent: {name}");
+                    var messageQueue = new MessageQueue();
+                    messageQueue.SendMessage(MessageQueueName, message);
+
+                    Console.WriteLine($"Message sent: {message}");
                     Console.WriteLine();
                 }
             }

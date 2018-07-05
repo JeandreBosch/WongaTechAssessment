@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Specialized;
+using System.Linq;
 using RabbitMqLibrary;
 
 namespace WongaReceiverApp
@@ -19,8 +20,6 @@ namespace WongaReceiverApp
                 var messageQueue = new MessageQueue();
                 messageQueue.MessagesCollection.CollectionChanged += MessagesCollection_CollectionChanged;
                 messageQueue.ReceiveMessage(MessageQueueName, false);
-
-                Console.ReadLine();
             }
             catch (Exception ex)
             {
@@ -35,6 +34,10 @@ namespace WongaReceiverApp
             foreach (string message in messages)
             {
                 Console.WriteLine(message);
+
+                string receivedName = message.Split(' ').Last();
+                Console.WriteLine($"Hello {receivedName}, I am your father!");
+
                 Console.WriteLine();
             }
         }
