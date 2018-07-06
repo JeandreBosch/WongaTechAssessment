@@ -1,4 +1,4 @@
-# Project Title
+# WongaTechAssessment
 
 RabbitMQ Console Application that exposes a helper library that can add Messages to the RabbitMQ Queues and Receive messages in two different Console Applications (Producer App and Consumer App).
 
