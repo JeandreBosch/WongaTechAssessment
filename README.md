@@ -8,7 +8,7 @@ These instructions will help you get started in running my applications.
 
 ### Installing
 
-Follow the following steps to get started
+Follow the steps below to get started
 
 Run the Receiver (Consumer) Console application first by opening the following batch file:
 
